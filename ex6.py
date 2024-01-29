@@ -1,6 +1,6 @@
 #This is a comment
-# ex5.py
-# decision within a loop
+# ex6.py
+# a list 
 
 def main():
 
