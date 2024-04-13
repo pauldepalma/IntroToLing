@@ -1,6 +1,6 @@
 '''
 Illustrates two tokenizers, one home-grown (simpleT), the other from NLTK (NLTK)
-Execution from the command line: python3 tokenizer.py corpus tokenizer
+Execution from the command line: python3 tokenizer.py tstCropus tokenizer simpleT
 '''
 
 from nltk.tokenize import word_tokenize
@@ -48,22 +48,23 @@ def tokenize(text):
 
 
 def count_words(word_lst):
-    '''
     word_dict = {}
     for word in word_lst:
         if word in word_dict:
             word_dict[word] = word_dict[word] + 1
         else:
             word_dict[word] = 1
-    '''
 
-    word_dict = Counter(word_lst)
+    #word_dict = Counter(word_lst)
     
     return word_dict
     
 def display(word_dict):
     for word in word_dict.keys():
-        print(word + '\t\t' + str(word_dict[word]))
+        #print(word + '\t\t' + str(word_dict[word]))
+        print(word)
+        print(str(word_dict[word]))
+        print()
 
 def stats(word_lst, word_dict, tokenizer):
     print("Tokenizer: " + tokenizer)
@@ -73,6 +74,11 @@ def stats(word_lst, word_dict, tokenizer):
     print("Types: " + str(V))
     print ("Ratio of Types to Tokens: ", str(V/N))
 
+def writeWords(word_lst):
+    fout = open('words.txt', 'w')
+    for word in word_lst:
+      fout.write(word + '\n');
+    fout.close();
     
 def main():
 
@@ -87,17 +93,18 @@ def main():
     if tokenizer == "NLTK":
         word_lst = word_tokenize(text)
     
-    #display word list. 
-    #for word in word_lst:
-    #    print(word)
+    #write tokenized word list to a file: words.txt 
+    writeWords(word_lst)
 
     #count words
     word_dict = count_words(word_lst)
 
+    #display words and frequencies
+    #display(word_dict)
+ 
+    #display stats about words
     #stats(word_lst, word_dict,tokenizer)
     
-    #display word with frequencies
-    #display(word_dict)
             
     
 main()
