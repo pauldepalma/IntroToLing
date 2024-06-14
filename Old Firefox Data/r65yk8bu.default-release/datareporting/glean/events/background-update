@@ -1,0 +1,8 @@
+{"timestamp":25299617,"category":"nimbus_events","name":"enrollment","extra":{"experiment":"awesome-bar-result-menu-rollout-phase-1","branch":"control-rollout","experiment_type":"rollout"}}
+{"timestamp":25299651,"category":"nimbus_events","name":"enrollment","extra":{"branch":"enable-csv-import","experiment":"csv-import-release-rollout","experiment_type":"rollout"}}
+{"timestamp":25299676,"category":"nimbus_events","name":"enrollment","extra":{"branch":"control","experiment_type":"rollout","experiment":"extensions-migration-in-import-wizard-116-rollout"}}
+{"timestamp":25299718,"category":"nimbus_events","name":"enrollment","extra":{"branch":"rollout-single-branch","experiment_type":"rollout","experiment":"opaque-response-blocking-orb-staged-release-rollout"}}
+{"timestamp":25299725,"category":"nimbus_events","name":"enroll_failed","extra":{"reason":"feature-conflict","experiment":"persist-search-term-rollout-phase-1"}}
+{"timestamp":25299733,"category":"nimbus_events","name":"enrollment","extra":{"experiment":"product-insight-telemetry-via-server-knobs-rollout-release","branch":"control-rollout","experiment_type":"rollout"}}
+{"timestamp":25299761,"category":"nimbus_events","name":"enroll_failed","extra":{"reason":"feature-conflict","experiment":"release-experiment-for-additional-metrics-for-product-insights-rollout"}}
+{"timestamp":25299767,"category":"nimbus_events","name":"enrollment","extra":{"experiment":"serp-ad-telemetry-rollout","experiment_type":"rollout","branch":"control"}}
