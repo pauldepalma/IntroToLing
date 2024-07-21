@@ -1,3 +1,0 @@
-sage control.sage $1 $2 $3 
-rm *.py
-rm -r __pycache__
