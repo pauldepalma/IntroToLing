@@ -1,4 +1,6 @@
+from pylab import *
 import networkx as nx
+
 
 def sect_15_1(g):
     print("Start 15.1")
@@ -52,24 +54,46 @@ def sect_15_4(g):
 
 def sect_15_5(g):
     print("Start 15.5")
-    #I'd like to be able to print items in a path
+    g['Jeff']['Jane']['trust'] = 7.0
+    g['Jeff']['Jane']['love'] = True
     
-    lst = g.edges.data()
-    for item in lst:
-        print(item)
+    g['Jess']['Josh']['love'] = True
     
+    
+
+    
+    print(nx.get_edge_attributes(g,'love'))
+    print(nx.get_edge_attributes(g,'trust'))
     print("End 15.5")
     return g
     
-    
-    
+def ex_15_10():
+    print('start 15.10')
+    g1 = nx.complete_graph(5)
+    g2 = nx.complete_bipartite_graph(2,2)
+    g3 = nx.karate_club_graph()
+    print(g1.edges())
+    print()
+    print(g2.edges())
+    print()
+    print(g3.edges())
+    print('end 15.10')
+
+def ex_15_11():
+    g = nx.karate_club_graph()
+    nx.draw_networkx(g,with_labels=True)
+    show()
+
 def main():
+    '''
     g = nx.Graph()
     g = sect_15_1(g)
     sect_15_2(g)
     sect_15_3(g)
     g = sect_15_4(g)
     sect_15_5(g)
+    '''
+    ex_15_11()
 
 
 main()
